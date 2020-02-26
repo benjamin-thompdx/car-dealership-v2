@@ -8,10 +8,10 @@ namespace Dealership
   {
     public static void Main()
     {
-      Car volkswagen = new Car("1974 Volkswagen Thing", 1100, 368792);
-      Car yugo = new Car("1980 Yugo Koral", 700, 56000);
-      Car ford = new Car("1988 Ford Country Squire", 1400, 239001);
-      Car amc = new Car("1976 AMC Pacer", 400, 198000);
+      Car volkswagen = new Car("1974 Volkswagen Thing", 1100, 368792, "Bang");
+      Car yugo = new Car("1980 Yugo Koral", 700, 56000, "Whoosh");
+      Car ford = new Car("1988 Ford Country Squire", 1400, 239001, "Clank");
+      Car amc = new Car("1976 AMC Pacer", 400, 198000, "Zap");
 
       List<Car> Cars = new List<Car>() { volkswagen, yugo, ford, amc };
 
@@ -37,6 +37,7 @@ namespace Dealership
         Console.WriteLine(automobile.GetMakeModel());
         Console.WriteLine(automobile.GetMiles() + " miles");
         Console.WriteLine("$" + automobile.GetPrice());
+        Console.WriteLine(automobile.GetSound());
       }
     }
   }

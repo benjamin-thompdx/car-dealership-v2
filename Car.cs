@@ -7,12 +7,14 @@ namespace Dealership.Models {
     private string _makeModel;
     private int _price;
     private int _miles;
+    private string _sound;
 
-    public Car(string makeModel, int price, int miles)
+    public Car(string makeModel, int price, int miles, string sound)
     {
       _makeModel = makeModel;
       _price = price;
       _miles = miles;
+      _sound = sound;
     }
 
     public string GetMakeModel()
@@ -33,6 +35,11 @@ namespace Dealership.Models {
     public void SetPrice(int newPrice)
     {
       _price = newPrice;
+    }
+
+    public string GetSound()
+    {
+      return "Our cars sound like " + _sound;
     }
 
     public bool WorthBuying(int maxPrice)
